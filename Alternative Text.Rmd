@@ -1,0 +1,55 @@
+---
+title: "Alternative Text"
+author: "Liza Dubinsky"
+date: "3/11/2022"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load packages and data
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(openintro)
+install.packages("countrycode")
+library(countrycode)
+```
+
+```{r load-data, message=FALSE}
+chocolate <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv')
+penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv')
+```
+
+```{r}
+chocolate <- chocolate %>%
+  mutate(continent = countrycode(country_of_bean_origin, origin  = "country.name", destination = "continent"))
+```
+
+```{r plot-chocolate}
+chocolate %>%
+  #narrow down to specific continent
+  filter(company_location == "U.S.A.", country_of_bean_origin != "Blend") %>%
+  group_by(country_of_bean_origin, continent) %>%
+  summarise(count = n()) %>%
+  #summarise(mean_cocoa_percent = mean(as.numeric(substr(cocoa_percent, start = 1, stop = 2)), na.rm = TRUE)) %>%
+  ggplot(mapping = aes(x = fct_reorder(country_of_bean_origin, count), y = count, fill = continent)) +
+  geom_col() + 
+  coord_flip() +
+  labs(title = "Bean Origin of Chocolate Bars Manufactured in the U.S.A.", y = "Number of Chocolate Bars Manufactured in the U.S.A.", x = "Country of Bean Origin") +
+  scale_fill_viridis_d() 
+  
+```
+
+```{r plot-penguins}
+penguins %>%
+  group_by(species) %>%
+  summarise(mean_bill = mean(bill_length_mm, na.rm = TRUE)) %>%
+  ggplot(mapping = aes(x = fct_reorder(species, mean_bill), y = mean_bill, fill = species)) +
+  geom_col() + 
+  coord_flip() +
+  labs(title = "Average Bill Length of Three Penguin Species", x = "Penguin Species", y = "Average Bill Length in Millimeters", fill = "Penguin Species") +
+  scale_fill_viridis_d() 
+```
