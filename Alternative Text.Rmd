@@ -18,6 +18,8 @@ install.packages("countrycode")
 library(countrycode)
 ```
 
+STATISTICS SECTION/REAL WORLD GROUND-IN 
+
 ```{r load-data, message=FALSE}
 chocolate <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv')
 penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv')
@@ -42,18 +44,25 @@ chocolate %>%
   scale_fill_viridis_d() 
   
 ```
-Please watch Amy Cesal's guide to writing alternative text for data visualization found [here](https://www.youtube.com/watch?v=nBcR95S0F0o). According to this video, what are the three components that alternative text for data visualization should include?
+Please watch Amy Cesal's guide to writing alternative text for data visualization from "name of conference" found on [Youtube](https://www.youtube.com/watch?v=nBcR95S0F0o). According to this video, what are the three components that alternative text for data visualization should include?
 
-With this in mind, which of the four alternative text examples below best describe the above image:
+Exercise 1. Add your response to the RMarkdown file.
+
+With this in mind, which of the four alternative text examples below best describe the above image (justify why each one meets or doesn't meet standards for alternative text for data visualizations:
 
 1. Bar chart where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
+
 2. Bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
 
 3. Bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin.
 
 4. Number of chocolate bars manufactured in the U.S.A by country and continent of bean origin where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
 
-Now, try your hand at writing alternative text for the data visualization below. Remember to include the chart type, type of data, and reason for including the chart in your alternative text:
+Exercise 2. Add your response to the RMarkdown file and justify your choice.
+
+ADD THIS AT THE END OF THE LAB TO COMBINE ALL SECTIONS IN ONE APPLICATION.
+
+Now, try your hand at making data visualizations more accessible by focusing on the color palette and alternative text of this data visualization. Remember to include the chart type, type of data, and reason for including the chart in your alternative text:
 
 ```{r plot-penguins}
 penguins %>%
@@ -62,8 +71,16 @@ penguins %>%
   ggplot(mapping = aes(x = fct_reorder(species, mean_bill), y = mean_bill, fill = species)) +
   geom_col() + 
   coord_flip() +
-  labs(title = "Average Bill Length of Three Penguin Species", x = "Penguin Species", y = "Average Bill Length in Millimeters", fill = "Penguin Species") +
-  scale_fill_viridis_d() 
+  labs(title = "Average Bill Length of Three Penguin Species", x = "Penguin Species", y = "Average Bill Length in Millimeters", fill = "Penguin Species") 
 ```
 
-Compare your alternative text for this data visualization with others in your group. As a group, combine your ideas to decide on the final alternative text for this data visualization. 
+Exercise 3: Add your response to the RMarkdown file.
+
+Compare your color palette and alternative text for this data visualization with others in your group. As a group, combine your ideas to decide on the final data visualization.
+
+Exercise 4: Add your response to the RMarkdown file.
+
+Reflection: i.e. (what's difficult about applying this criteria to more complex visualizations, what purpose do these elements provide for you as the creator of data visualizations as well as your audience, objectivity)
+
+Choose your own adventure ideas: Homeworks and labs are missing alternative text, choose a plot and write alternative text (link to which visualization you're working on) -- contributing to accessibility of assignments used in the future
+
