@@ -1,6 +1,6 @@
 ---
-title: "Alternative Text"
-author: "Liza Dubinsky"
+title: "Alternative Text and Color Visualizations"
+author: "Liza Dubinsky and Max Devon"
 date: "3/11/2022"
 output: html_document
 ---
@@ -58,7 +58,23 @@ With this in mind, which of the four alternative text examples below best descri
 
 4. Number of chocolate bars manufactured in the U.S.A by country and continent of bean origin where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
 
+Making sure your data visualizations are accessible also requires considering the colors you use. Please read WebAIM's guide on Contrast and Color Accessibility: (https://webaim.org/articles/contrast/#ratio)
+
 Exercise 2. Add your response to the RMarkdown file and justify your choice.
+
+With that understanding, which of the following three dichromatic color palettes is the most accessible in terms of contrast? You may use the WebAIM contrast checker: (https://webaim.org/resources/contrastchecker/). 
+
+1. #E0E0E0 and #F5F5F5
+
+2. #AE1313 and #525252
+
+3. #19CCF0 and #262626 
+
+Visualizations should be accessible to those with color blindness, which affects roughly 300 million people worldwide. According to CR Ferreira, there are 2 important steps to ensure that those with color blindness can understand your visualization: (https://towardsdatascience.com/two-simple-steps-to-create-colorblind-friendly-data-visualizations-2ed781a167ec). 
+
+Exercise 3. Add your response to the RMarkdown file.
+
+After reading Ferreira's article, what are the 2 steps to make visualizations accessible for those with color blindness? Reflect on what you have learned about color accessibility in data visualizations more broadly, and the tools you can use to produce readable visualizations.  
 
 ADD THIS AT THE END OF THE LAB TO COMBINE ALL SECTIONS IN ONE APPLICATION.
 
