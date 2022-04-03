@@ -8,10 +8,6 @@ output:
 link-citations: yes
 ---
 
-```{marginfigure}
-R is the name of the programming language itself and RStudio is a convenient interface.
-```
-
 The main goal of this lab is to introduce you to elements of accessibility in data visualization which you will be using in your final projects.
 
 ## Packages
