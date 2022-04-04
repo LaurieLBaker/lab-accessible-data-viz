@@ -8,8 +8,9 @@ output: html_document
 ## Load packages and data
 
 ```{r load-packages, message=FALSE}
-library(tidyverse) 
-library(datasauRus)
+library(tidyverse)
+library(openintro)
+library(countrycode)
 ```
 
 ## Exercises
@@ -20,53 +21,39 @@ Remove this text, and add your answer for Exercise 1 here.
 
 ### Exercise 2
 
-The answers for this Exercise are given for you below.
-But you should clean up some of the narrative so that it only includes what you want to turn in.
+I.
 
-First let's plot the data in the dino dataset:
+II.
 
-```{r plot-dino, fig.height=3, fig.width=6}
-dino_data <- datasaurus_dozen %>%
-  filter(dataset == "dino")
+III.
 
-ggplot(data = dino_data, mapping = aes(x = x, y = y)) +
-  geom_point()
-```
-
-And next calculate the correlation between `x` and `y` in this dataset:
-
-```{r cor-dino}
-dino_data %>%
-  summarize(r = cor(x, y))
-```
+IV.
 
 ### Exercise 3
 
-Add code and narrative as needed.
-Note that the R chunks are labelled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient.
-To finish, clean up the narrative by removing these instructions.
+Below is the code for the initial data visualization:
 
-Blah blah blah...
-
-```{r plot-star}
-
+```{r plot-penguins}
+penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv')
+penguins %>%
+  group_by(species) %>%
+  summarise(mean_bill = mean(bill_length_mm, na.rm = TRUE)) %>%
+  ggplot(mapping = aes(x = fct_reorder(species, mean_bill), y = mean_bill, fill = species)) +
+  geom_col() + 
+  coord_flip() +
+  labs(title = "Average Bill Length of Three Penguin Species", x = "Penguin Species", y = "Average Bill Length in Millimeters", fill = "Penguin Species") 
 ```
 
-I'm some text, you should replace me with more meaningful text...
-
-```{r cor-star}
-
-```
-
-### Exercise 4
-
-Add code and narrative as needed.
-Note that two R chunks are given but they are not labeled.
-Use the convention from above to name them appropriately.
+Add code and narrative as needed to improve the accessibility of the above data visualization by focusing on the color palette and alternative text.
 
 ```{r}
 
 ```
+
+
+### Exercise 4
+
+Add code and narrative as needed for your group's final data visualization.
 
 ```{r}
 
@@ -74,5 +61,4 @@ Use the convention from above to name them appropriately.
 
 ### Exercise 5
 
-Add code and narrative as needed.
-To add R chunks either type out the backticks, curly braces, and the letter `r` or use the Insert chunk button above, green C+.
+Remove this text, and add your answer for Exercise 5 here.
