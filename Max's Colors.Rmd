@@ -74,7 +74,9 @@ Visualizations should be accessible to those with color blindness, which affects
 
 Exercise 3. Add your response to the RMarkdown file.
 
-After reading Ferreira's article, what are the 2 steps to make visualizations accessible for those with color blindness? Reflect on what you have learned about color accessibility in data visualizations more broadly, and the tools you can use to produce readable visualizations.  
+After reading Ferreira's article, what are the 2 steps to make visualizations accessible for those with color blindness? Reflect on what you have learned about color accessibility in data visualizations more broadly, and the tools you can use to produce readable visualizations.
+
+
 
 ADD THIS AT THE END OF THE LAB TO COMBINE ALL SECTIONS IN ONE APPLICATION.
 
