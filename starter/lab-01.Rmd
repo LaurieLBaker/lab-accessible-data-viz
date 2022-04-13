@@ -53,12 +53,33 @@ Add code and narrative as needed to improve the accessibility of the above data 
 
 ### Exercise 4
 
+Fill in the blanks in the code chunk below appropriately:
+
+```{r pattern-penguins}
+penguins %>%
+  group_by(species) %>%
+  summarise(mean_bill = mean(bill_length_mm, na.rm = TRUE)) %>%
+  ggplot(mapping = aes(x = fct_reorder(species, mean_bill), y = mean_bill, fill = species)) +
+  geom_col_pattern(
+    aes(pattern = _____ , fill = _____, pattern_fill = _____,
+    colour                   = 'black', 
+    pattern_density          = 0.35, 
+    pattern_key_scale_factor = 1.3) +
+  theme_bw() +
+  scale_pattern_fill______ + 
+  theme(legend.position = 'none') + 
+  coord_flip() +
+  labs(title = "Average Bill Length of Three Penguin Species", x = "Penguin Species", y = "Average Bill Length in Millimeters", fill = "Penguin Species") 
+```
+
+### Exercise 5
+
 Add code and narrative as needed for your group's final data visualization.
 
 ```{r}
 
 ```
 
-### Exercise 5
+### Exercise 6
 
 Remove this text, and add your answer for Exercise 5 here.

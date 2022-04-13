@@ -90,7 +90,6 @@ penguins %>%
 
 🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add answer for Ex 3", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
-
 4. Observe the following use of accessible color palettes and patterns to make below visualization accessible:
 
 ```{r}
@@ -134,6 +133,8 @@ penguins %>%
   coord_flip() +
   labs(title = "Average Bill Length of Three Penguin Species", x = "Penguin Species", y = "Average Bill Length in Millimeters", fill = "Penguin Species") 
 ```
+
+🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add answer for Ex 4", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 5. Compare your color palette and alternative text for this data visualization with others in your group. As a group, combine your ideas to decide on the final data visualization.
 
