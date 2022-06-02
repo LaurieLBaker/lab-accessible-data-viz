@@ -2,32 +2,39 @@
 title: "Lab X - Accessibility"
 output: 
   tufte::tufte_html:
-    css: ../lab.css
+    css: ../lab2.css
     tufte_variant: "envisioned"
     highlight: pygments
 link-citations: yes
 ---
 
-The main goal of this lab is to introduce you to elements of accessibility in data visualization which you will be using in your final projects.
+```{marginfigure}
+For more on accessibility practices, check out the WAVE guidelines.
+```
+
+
+The main goal of this lab is to introduce you to elements of accessibility in data visualization which you will be using throughout the course and in your final projects. Creating accessible visualizations involves many facets. In this lab we will focus primarily on writing and including alternative text for plots and choosing effective color schemes for your data.
 
 ## Packages
 
-In this lab we will work with two packages: **openintro** which contains the dataset we'll be using and **tidyverse** which is a collection of packages for doing data analysis in a "tidy" way. We will also be using the **countrycode** package to run certain visualizations.
+In this lab we will work with two principal packages: **ggpattern** which allow us to customize the pattern of our plots and **tidyverse** which is a collection of packages including **ggplot2** for doing data analysis and visualization in a "tidy" way. We will also be using the **countrycode** package to format and preprocess the data for the chocolate bar visualizations.
 
-These packages are already installed for you.
-You can load the packages by running the following in the Console.
+These packages are already installed for you. You can load the packages by running the following in the Console.
+
+```{r chunk-setup}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
 
 ```{r message=FALSE}
 library(tidyverse) 
-library(openintro)
 library(countrycode)
-library(ggplot2)
 library(ggpattern)
 ```
 
 Note that the packages are also loaded with the same commands in your R Markdown document.
 
-## Datas
+## Data
 
 The data frames we will be working with today are called `chocolate` and `penguins` and are both from the `TidyTuesday` GitHub repository.
 
@@ -35,36 +42,49 @@ You can load the data frames by running the following in the Console.
 
 ```{r load-data, message=FALSE}
 chocolate <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-01-18/chocolate.csv')
+
 penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv')
 ```
 
 
 # Exercises
 
-1.  Please watch Amy Cesal's guide to writing alternative text for data visualization from "name of conference" found on [Youtube](https://www.youtube.com/watch?v=nBcR95S0F0o). According to this video, what are the three components that alternative text for data visualization should include?
+1.  Please watch Amy Cesal's guide to writing alternative text for data visualization from the Outlier 2021 conference on [Youtube](https://www.youtube.com/watch?v=nBcR95S0F0o). According to this video, what are the three components that alternative text for data visualization should include?
 
 🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add answer for Ex 1". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
-```{r}
+First we will create a new continent variable using `mutate` that will allow us to explore chocolate production and cacao origin by continent.
+
+```{r create-continent-variable}
 chocolate <- chocolate %>%
-  mutate(continent = countrycode(country_of_bean_origin, origin  = "country.name", destination = "continent"))
+  mutate(continent = countrycode(country_of_bean_origin, 
+                                 origin  = "country.name", 
+                                 destination = "continent")
+         )
 ```
+
+Next, we will filter the data for chocolate bars produced by companies located in the USA that are of a single-country bean origin, and then count the number of chocolate bars produced by bean country of origin and continent.
 
 ```{r plot-chocolate}
 chocolate %>%
-  #narrow down to specific continent
-  filter(company_location == "U.S.A.", country_of_bean_origin != "Blend") %>%
+  filter(company_location == "U.S.A.", 
+         country_of_bean_origin != "Blend") %>%
   group_by(country_of_bean_origin, continent) %>%
   summarise(count = n()) %>%
-  #summarise(mean_cocoa_percent = mean(as.numeric(substr(cocoa_percent, start = 1, stop = 2)), na.rm = TRUE)) %>%
-  ggplot(mapping = aes(x = fct_reorder(country_of_bean_origin, count), y = count, fill = continent)) +
+  ggplot(mapping = aes(x = fct_reorder(country_of_bean_origin, count), 
+                       y = count, 
+                       fill = continent)
+         ) +
   geom_col() + 
   coord_flip() +
-  labs(title = "Bean Origin of Chocolate Bars Manufactured in the U.S.A.", y = "Number of Chocolate Bars Manufactured in the U.S.A.", x = "Country of Bean Origin", fill = "Continent") +
+  labs(title = "Bean Origin of Chocolate Bars Manufactured in the U.S.A.", 
+       y = "Number of Chocolate Bars Manufactured in the U.S.A.", 
+       x = "Country of Bean Origin", 
+       fill = "Continent") +
   scale_fill_viridis_d() 
 ```
 
-2. With this in mind, justify why each of the four alternative text examples below describing the above image meets or doesn't meet standards for alternative text for data visualizations: 
+2. With the three components alternative text for data visualizations should include in mind, justify why each of the four alternative text examples below describing the above image meets or doesn't meet standards for alternative text for data visualizations: 
 
 I. Bar chart where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
 
@@ -82,10 +102,16 @@ IV. Number of chocolate bars manufactured in the U.S.A by country and continent 
 penguins %>%
   group_by(species) %>%
   summarise(mean_bill = mean(bill_length_mm, na.rm = TRUE)) %>%
-  ggplot(mapping = aes(x = fct_reorder(species, mean_bill), y = mean_bill, fill = species)) +
+  ggplot(mapping = aes(x = fct_reorder(species, mean_bill), 
+                       y = mean_bill, 
+                       fill = species)
+         ) +
   geom_col() + 
   coord_flip() +
-  labs(title = "Average Bill Length of Three Penguin Species", x = "Penguin Species", y = "Average Bill Length in Millimeters", fill = "Penguin Species") 
+  labs(title = "Average Bill Length of Three Penguin Species", 
+       x = "Penguin Species", 
+       y = "Average Bill Length in Millimeters", 
+       fill = "Penguin Species") 
 ```
 
 🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add answer for Ex 3", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
@@ -94,17 +120,20 @@ penguins %>%
 
 ```{r}
 
-sample_dataframe <- data.frame(Categories = c("a", "b", "c", 'd'), Values = c(2.3, 1.9, 3.2, 1))
+sample_dataframe <- data.frame(Categories = c("a", "b", "c", 'd'), 
+                               Values = c(2.3, 1.9, 3.2, 1))
 
 sample_plot <- ggplot(sample_dataframe, aes(Categories, Values)) +
   geom_col_pattern(
-    aes(pattern = Categories, fill = Categories, pattern_fill = Categories), 
-    colour                   = 'black', 
-    pattern_density          = 0.35, 
+    aes(pattern = Categories, 
+        fill = Categories, 
+        pattern_fill = Categories), 
+    colour = 'black', 
+    pattern_density = 0.35, 
     pattern_key_scale_factor = 1.3) +
   theme_bw() +
   labs(
-    title    = "Sample Plot Illustrating Double-Coding for Accessibility",
+    title = "Sample Plot Illustrating Double-Coding for Accessibility",
     subtitle = "Using Color and Patterns"
   ) +
   scale_pattern_fill_viridis_d() + 
@@ -115,23 +144,30 @@ sample_plot
 
 ```
 
-Now, fill in the blanks in the following code chunk to improve the accessibility of the penguin species visualization in the same way:
+Now, fill in the blanks in the following code chunk to improve the accessibility of the penguin species visualization in the same way. Once you have added your code change the chunk options `eval = FALSE` to `eval = TRUE`:
 
-```{r pattern-penguins}
+```{r pattern-penguins, eval = FALSE}
 penguins %>%
   group_by(species) %>%
   summarise(mean_bill = mean(bill_length_mm, na.rm = TRUE)) %>%
-  ggplot(mapping = aes(x = fct_reorder(species, mean_bill), y = mean_bill, fill = species)) +
+  ggplot(mapping = aes(x = fct_reorder(species, mean_bill), 
+                       y = mean_bill, fill = species)
+         ) +
   geom_col_pattern(
-    aes(pattern = _____ , fill = _____, pattern_fill = _____,
-    colour                   = 'black', 
-    pattern_density          = 0.35, 
+    aes(pattern = _____ , 
+        fill = _____, 
+        pattern_fill = _____,
+    colour = 'black', 
+    pattern_density = 0.35, 
     pattern_key_scale_factor = 1.3) +
   theme_bw() +
   scale_pattern_fill______ + 
   theme(legend.position = 'none') + 
   coord_flip() +
-  labs(title = "Average Bill Length of Three Penguin Species", x = "Penguin Species", y = "Average Bill Length in Millimeters", fill = "Penguin Species") 
+  labs(title = "Average Bill Length of Three Penguin Species", 
+       x = "Penguin Species", 
+       y = "Average Bill Length in Millimeters", 
+       fill = "Penguin Species") 
 ```
 
 🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add answer for Ex 4", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
@@ -143,3 +179,8 @@ penguins %>%
 6. Reflection: What's difficult about applying this criteria to more complex visualizations? What purpose do these elements provide for you as the creator of data visualizations as well as your audience?
 
 🧶 ✅ ⬆️ *Yay, you're done! Commit all remaining changes, use the commit message "Finish Lab X!* 💪*", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.*
+
+
+## Acknowledgements
+
+This lab was created by Bates College students Liza Dubinsky and Max Devon in collaboration with Dr. Laurie Baker as part of a Bates Faculty Development Fund. 
