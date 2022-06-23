@@ -9,7 +9,7 @@ link-citations: yes
 ---
 
 ```{marginfigure}
-For more on accessibility practices, check out the WAVE guidelines.
+You can check the accessibility of a webpage using the [WebAim](https://wave.webaim.org) tool.
 ```
 
 TidyTuesday, a weekly social project for individuals to practice their data visualization skills in R, is one of many spaces rendered inaccessible due to a lack of alternative text for screen reading technology. An analysis of TidyTuesday images posted on Twitter between 2018 and 2021 by Silvia Canelón and Elizabeth Hare revealed that 3% of the data visualizations had alternative text and 84% of the images were described by default as "image". There is still a great deal of progress to be made concerning accessibility not only on Twitter but across all platforms. 
@@ -105,20 +105,24 @@ In choosing a color palette, you should consider the kind of data that you are d
 
 The **RColorBrewer** package palettes include both sequential and diverging color palettes for numerical data. To visualize incremental changes in data, choose from the below palettes:
 
-```{r brewer-seq}
+```{r brewer-seq, fig.alt="Diagram showing colors for eighteen R Color Brewer color blind friendly sequential color palettes including a 9 color gradient. Possible palettes include YlOrRd, YlOrBr, YlGnBu, YlGn, Reds, RdPu, Purples, PuRd, PuBuGn, PuBu, OrRd, Oranges, Greys, Greens, GnBu, BuPu, BuGn, Blues. Short hand colors are: Yl is yellow, Or is orange, Rd is red, Br is Brown, Gn is green, Bu is blue, Pu is purple"}
+
 display.brewer.all(type = "seq", colorblindFriendly = TRUE)
+
 ```
 To visualize data that falls above or below a starting point, choose from the below palettes:
 
-```{r brewer-div}
+```{r brewer-div, fig.alt = "Diagram showing colors for six RColorBrewer color blind friendly sequential color palettes including an 11 color gradient. Possible palettes include RdYlBu, RdBu, PuOr, PRGn, PiYG, BRBG. Color abbreviations are: Yl is yellow, Or is orange, Rd is red, Br is Brown, Gn is green, Bu is blue, Pu is purple, BG is Blue Green, YG is yellow green, PR is a dark purple"}
+
 display.brewer.all(type = "div", colorblindFriendly = TRUE)
+
 ```
 
 To show the alternative text that you have written for this data visualization, include the following in the code chunk header:
 
 
 ````
-```{r Libraries, echo = FALSE}`r ''`
+```{r Libraries, fig.alt = "Put Alternative Text Here"}`r ''`
 
 library(tidyverse)
 
@@ -127,7 +131,7 @@ library(tidyverse)
 
 3. Now, try your hand at making data visualizations more accessible by focusing on the color palette and alternative text of this data visualization. Remember to include the chart type, type of data, and reason for including the chart in your alternative text:
 
-```{r plot-penguins}
+```{r plot-penguins, fig.alt = ""}
 penguins %>%
   group_by(species) %>%
   summarise(mean_bill = mean(bill_length_mm, na.rm = TRUE)) %>%
