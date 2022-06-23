@@ -54,6 +54,8 @@ penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/t
 
 1.  Please watch Amy Cesal's guide to writing alternative text for data visualization from the Outlier 2021 conference on [Youtube](https://www.youtube.com/watch?v=nBcR95S0F0o). According to this video, what are the three components that alternative text for data visualization should include?
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nBcR95S0F0o" title="YouTube video player" frameborder="0" data-external="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add answer for Ex 1". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 First we will create a new continent variable using `mutate` that will allow us to explore chocolate production and cacao origin by continent.
