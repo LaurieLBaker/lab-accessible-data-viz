@@ -215,6 +215,9 @@ penguins %>%
 
 🧶 ✅ ⬆️ *Yay, you're done! Commit all remaining changes, use the commit message "Finish Lab X!* 💪*", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.*
 
+## Further Resources
+
+Find a non-exhaustive list of Data Visualization Accessibility resources on the [dataviza11y github](https://github.com/dataviza11y/resources)
 
 ## Acknowledgements
 
