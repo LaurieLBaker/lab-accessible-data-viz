@@ -124,9 +124,9 @@ To show the alternative text that you have written for this data visualization, 
 
 
 ````
-```{r Libraries, fig.alt = "Put Alternative Text Here"}`r ''`
+```{r, fig.alt = "Add Alternative Text Here"}`r ''`
 
-library(tidyverse)
+add code here
 
 ```
 ````
@@ -216,6 +216,23 @@ penguins %>%
 6. Reflection: What's difficult about applying this criteria to more complex visualizations? What purpose do these elements provide for you as the creator of data visualizations as well as your audience?
 
 🧶 ✅ ⬆️ *Yay, you're done! Commit all remaining changes, use the commit message "Finish Lab X!* 💪*", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.*
+
+## Recap of Amy Cesal's Alternative Text Guide
+
+In the video that you watched above, Amy Cesal provided a guide to writing alternative text for data visualization. Adding alternative text to images increases accessibility, especially for individuals with some level of visual impairment who use assistive technology like screen readers. Without alternative text, people miss out on content simply because it's visual. 
+
+Amy Cesal outlines three components of effective alternative text for data visualization:
+
+
+adding alternative text to images can help increase accessibility especially for people who use assistive tech like screen readers, read alt text out loud so users can understand visual content by hearing description of what is displayed often have visual impairment (totally blind, low or impaired vision)
+
+no alt text = people miss out on content that is necessary just because its visual
+
+alt text for image of chart or graph :
+chart type (gives context for understanding rest of visual)
+type of data included in chart (x and y axis labels)
+reason for inclding chrt (why including, wht does it show thats meaningful, point to every visual, tell people what to look for)
+link to data source for people to explore more (not in alt text but in surrounding text)
 
 ## Further Resources
 
