@@ -12,7 +12,7 @@ link-citations: yes
 You can check the accessibility of a webpage using the [WebAim](https://wave.webaim.org) tool.
 ```
 
-TidyTuesday, a weekly social project for individuals to practice their data visualization skills in R, is one of many spaces rendered inaccessible due to a lack of alternative text for screen reading technology. An analysis of TidyTuesday images posted on Twitter between 2018 and 2021 by Silvia Canelón and Elizabeth Hare revealed that 3% of the data visualizations had alternative text and 84% of the images were described by default as "image". There is still a great deal of progress to be made concerning accessibility not only on Twitter but across all platforms. 
+TidyTuesday, a weekly social project for individuals to practice their data visualization skills in R, is one of many spaces rendered inaccessible due to a lack of alternative text for screen reading technology. [An analysis of TidyTuesday images posted on Twitter between 2018 and 2021 by Silvia Canelón and Elizabeth Hare](https://zenodo.org/record/4743271#.Yrh5cBPMKU0) revealed that 3% of the data visualizations had alternative text and 84% of the images were described by default as "image". There is still a great deal of progress to be made concerning accessibility not only on Twitter but across all platforms. 
 
 The main goal of this lab is to introduce you to elements of accessibility in data visualization which you will be using throughout the course and in your final projects. Creating accessible visualizations involves many facets. In this lab we will focus primarily on writing and including alternative text for plots and choosing effective color schemes for your data.
 
@@ -101,9 +101,9 @@ chocolate %>%
 
 🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add answer for Ex 2". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
-Approximately 300 million people are affected by color blindness. When creating data visualizations, the wrong choice of colors can easily render a figure inaccessible. As such, it is critical to choose a color palette that is accessible for all members of your audience. Two such palettes are the Viridis color scales, using the **viridis** package, and the Colorbrewer palettes, using the **RColorBrewer** package. 
+According to the [Colour Blind Awareness organization](https://www.colourblindawareness.org/colour-blindness/), approximately 300 million people are affected by color blindness worldwide. When creating data visualizations, the wrong choice of colors can easily render a figure inaccessible. As such, it is critical to choose a color palette that is accessible for all members of your audience. Two such palettes are the Viridis color scales, using the **viridis** package, and the Colorbrewer palettes, using the **RColorBrewer** package. 
 
-In choosing a color palette, you should consider the kind of data that you are dealing with for the data visualization at hand. You can create your own colorblind safe color palette based on your preferred number of colors and whether your data is numeric or categorical using the [ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3). This website produces HEX color codes that may be used to define the colors of data visualizations in R.
+In choosing a color palette, you should consider the kind of data that you are dealing with for the data visualization at hand. You can create your own colorblind safe color palette based on your preferred number of colors and whether your data is numeric or categorical using the [ColorBrewer](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3). This tool produces HEX color codes that may be used to define the colors of data visualizations in R.
 
 The **RColorBrewer** package palettes include both sequential and diverging color palettes for numerical data. To visualize incremental changes in data, choose from the below palettes:
 
@@ -112,6 +112,7 @@ The **RColorBrewer** package palettes include both sequential and diverging colo
 display.brewer.all(type = "seq", colorblindFriendly = TRUE)
 
 ```
+
 To visualize data that falls above or below a starting point, choose from the below palettes:
 
 ```{r brewer-div, fig.alt = "Diagram showing colors for six RColorBrewer color blind friendly sequential color palettes including an 11 color gradient. Possible palettes include RdYlBu, RdBu, PuOr, PRGn, PiYG, BRBG. Color abbreviations are: Yl is yellow, Or is orange, Rd is red, Br is Brown, Gn is green, Bu is blue, Pu is purple, BG is Blue Green, YG is yellow green, PR is a dark purple"}
@@ -151,7 +152,7 @@ penguins %>%
 
 🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add answer for Ex 3", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
-In addition to choosing a colorblind-friendly color palette, you should utilize different geometrical shapes, line patterns, and fill textures in your data visualizations. 
+As outlined by [CR Ferreira in "Two Simple Steps to Create Colorblind-Friendly Data Visualizations", published in Towards Data Science](https://towardsdatascience.com/two-simple-steps-to-create-colorblind-friendly-data-visualizations-2ed781a167ec), you should practice double-coding to create accessible data visualizations. This means that in addition to choosing a colorblind-friendly color palette, you should utilize different geometrical shapes, line patterns, and fill textures in your data visualizations. 
 
 4. Observe the following use of accessible color palettes and patterns to make below visualization accessible:
 
@@ -217,22 +218,11 @@ penguins %>%
 
 🧶 ✅ ⬆️ *Yay, you're done! Commit all remaining changes, use the commit message "Finish Lab X!* 💪*", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.*
 
-## Recap of Amy Cesal's Alternative Text Guide
+## Summary of Amy Cesal's Alternative Text Guide
 
 In the video that you watched above, Amy Cesal provided a guide to writing alternative text for data visualization. Adding alternative text to images increases accessibility, especially for individuals with some level of visual impairment who use assistive technology like screen readers. Without alternative text, people miss out on content simply because it's visual. 
 
-Amy Cesal outlines three components of effective alternative text for data visualization:
-
-
-adding alternative text to images can help increase accessibility especially for people who use assistive tech like screen readers, read alt text out loud so users can understand visual content by hearing description of what is displayed often have visual impairment (totally blind, low or impaired vision)
-
-no alt text = people miss out on content that is necessary just because its visual
-
-alt text for image of chart or graph :
-chart type (gives context for understanding rest of visual)
-type of data included in chart (x and y axis labels)
-reason for inclding chrt (why including, wht does it show thats meaningful, point to every visual, tell people what to look for)
-link to data source for people to explore more (not in alt text but in surrounding text)
+Amy Cesal outlines three components of effective alternative text for data visualization. First, describe the **chart type** of the data visualization to give the audience context for understanding the rest of the visual. Then, include the **type of data** included in the chart by referring to the x and y axis labels, for example. Finally, add the **reason for including the chart** by telling the audience what to look for and what makes the chart meaningful. Link to the data source that was used to produce the chart in the surrounding text rather than in the alternative text for further exploration. 
 
 ## Further Resources
 
