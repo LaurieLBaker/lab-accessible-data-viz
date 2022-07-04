@@ -11,6 +11,9 @@ output: html_document
 library(tidyverse)
 library(openintro)
 library(countrycode)
+library(ggpattern)
+library(ggplot2)
+library(RColorBrewer)
 ```
 
 ## Exercises
@@ -82,4 +85,4 @@ Add code and narrative as needed for your group's final data visualization.
 
 ### Exercise 6
 
-Remove this text, and add your answer for Exercise 5 here.
+Remove this text, and add your answer for Exercise 6 here.
