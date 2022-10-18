@@ -1,5 +1,5 @@
 ---
-title: "Lab X - Accessible Data Viz"
+title: "Lab - Accessible Data Viz"
 author: "Insert your name here"
 date: "Insert date here"
 output: html_document
