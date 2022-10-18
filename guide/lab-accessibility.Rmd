@@ -1,5 +1,5 @@
 ---
-title: "Lab X - Accessibility"
+title: "Lab Accessibility"
 output: 
   tufte::tufte_html:
     css: ../lab2.css
@@ -8,9 +8,6 @@ output:
 link-citations: yes
 ---
 
-```{marginfigure}
-You can check the accessibility of a webpage using the [WebAim](https://wave.webaim.org) tool.
-```
 
 TidyTuesday, a weekly social project for individuals to practice their data visualization skills in R, is one of many spaces rendered inaccessible due to a lack of alternative text for screen reading technology. [An analysis of TidyTuesday images posted on Twitter between 2018 and 2021 by Silvia Canelón and Elizabeth Hare](https://zenodo.org/record/4743271#.Yrh5cBPMKU0) revealed that 3% of the data visualizations had alternative text and 84% of the images were described by default as "image". There is still a great deal of progress to be made concerning accessibility not only on Twitter but across all platforms. 
 
@@ -57,7 +54,7 @@ penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/t
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nBcR95S0F0o" title="YouTube video player" frameborder="0" data-external="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add answer for Ex 1". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
+🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add Exercise 1". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 First, we will create a new continent variable using `mutate` that will allow us to explore chocolate production and cacao origin by continent.
 
@@ -104,7 +101,7 @@ chocolate %>%
 
 - Number of chocolate bars manufactured in the U.S.A by country and continent of bean origin where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
 
-🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add answer for Ex 2". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
+🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add Exercise 2". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 According to the [Colour Blind Awareness organization](https://www.colourblindawareness.org/colour-blindness/), approximately 300 million people are affected by color blindness worldwide. When creating data visualizations, the wrong choice of colors can easily render a figure inaccessible. As such, it is critical to choose a color palette that is accessible for all members of your audience. Two such palettes are the Viridis color scales included in the **ggplot2** package, and the Colorbrewer palettes, using the **RColorBrewer** package. 
 
@@ -159,7 +156,7 @@ penguins %>%
        fill = "Penguin Species") 
 ```
 
-🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add answer for Ex 3", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
+🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add Exercise 3", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 As outlined by [CR Ferreira in "Two Simple Steps to Create Colorblind-Friendly Data Visualizations", published in Towards Data Science](https://towardsdatascience.com/two-simple-steps-to-create-colorblind-friendly-data-visualizations-2ed781a167ec), you should practice double-coding to create accessible data visualizations. This means that in addition to choosing a colorblind-friendly color palette, you should utilize different geometrical shapes, line patterns, and fill textures in your data visualizations. 
 
@@ -225,11 +222,11 @@ penguins %>%
   coord_flip()
 ```
 
-🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add answer for Ex 4", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
+🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add Exercise 4", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
 5. Compare your color palette and alternative text for this data visualization with others in your group. As a group, combine your ideas to decide on the final data visualization.
 
-🧶 ✅ ⬆️ *You should pause again, commit changes with the commit message "Add answer for Ex 5" and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
+🧶 ✅ ⬆️ *You should pause again, commit changes with the commit message "Add Exercise 5" and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
  
 6. Reflection: What's difficult about applying this criteria to more complex visualizations? What purpose do these elements provide for you as the creator of data visualizations as well as your audience?
 
@@ -245,6 +242,11 @@ Amy Cesal outlines three components of effective alternative text for data visua
 
 Find a non-exhaustive list of Data Visualization Accessibility resources on the [dataviza11y github](https://github.com/dataviza11y/resources)
 
+```{marginfigure}
+Want to go further? You can check the accessibility of a webpage using the [WebAim](https://wave.webaim.org) tool.
+```
+
+
 ## Acknowledgements
 
-This lab was created by Bates College students Liza Dubinsky and Max Devon in collaboration with Dr. Laurie Baker as part of a Bates Faculty Development Fund. 
+This lab was created by Bates College students, Liza Dubinsky and Max Devon, in collaboration with Dr. Laurie Baker as part of a Bates Faculty Development Fund. 
