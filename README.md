@@ -1,5 +1,5 @@
 # Accessible Data Visualization lab
 
-Access lab instructions on the [accessibility lab github page website](guide/lab-01-hello-r.html)
+Access lab instructions on the [accessibility lab github page website](guide/lab-accessibility.html)
 
-Access the lab starte on the [accessibility lab github page website](starter/lab-01.html)
+Access the lab starter template for students on the [accessibility lab github page website](starter/lab-accessibility.html)
