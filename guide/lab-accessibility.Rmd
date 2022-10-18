@@ -105,6 +105,13 @@ chocolate %>%
 
 🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add Exercise 2". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
+
+### Recap of Amy Cesal's Alternative Text Guide
+
+In the video that you watched above, Amy Cesal provided a guide to writing alternative text for data visualization. Adding alternative text to images increases accessibility, especially for individuals with some level of visual impairment who use assistive technology like screen readers. Without alternative text, people miss out on content simply because it's visual. 
+
+Amy Cesal outlines three components of effective alternative text for data visualization. First, describe the **chart type** of the data visualization to give the audience context for understanding the rest of the visual. Then, include the **type of data** included in the chart by referring to the x and y axis labels, for example. Finally, add the **reason for including the chart** by telling the audience what to look for and what makes the chart meaningful. Link to the data source that was used to produce the chart in the surrounding text rather than in the alternative text for further exploration. 
+
 ## Part II: Choosing Effective Color Schemes
 
 According to the [Colour Blind Awareness organization](https://www.colourblindawareness.org/colour-blindness/), approximately 300 million people are affected by color blindness worldwide. When creating data visualizations, the wrong choice of colors can easily render a figure inaccessible. As such, it is critical to choose a color palette that is accessible for all members of your audience. Two such palettes are the Viridis color scales included in the **ggplot2** package, and the Colorbrewer palettes, using the **RColorBrewer** package. 
@@ -235,12 +242,6 @@ penguins %>%
 6. Reflection: What's difficult about applying this criteria to more complex visualizations? What purpose do these elements provide for you as the creator of data visualizations as well as your audience?
 
 🧶 ✅ ⬆️ *Yay, you're done! Commit all remaining changes, use the commit message "Finish Lab X!* 💪*", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.*
-
-## Summary of Amy Cesal's Alternative Text Guide
-
-In the video that you watched above, Amy Cesal provided a guide to writing alternative text for data visualization. Adding alternative text to images increases accessibility, especially for individuals with some level of visual impairment who use assistive technology like screen readers. Without alternative text, people miss out on content simply because it's visual. 
-
-Amy Cesal outlines three components of effective alternative text for data visualization. First, describe the **chart type** of the data visualization to give the audience context for understanding the rest of the visual. Then, include the **type of data** included in the chart by referring to the x and y axis labels, for example. Finally, add the **reason for including the chart** by telling the audience what to look for and what makes the chart meaningful. Link to the data source that was used to produce the chart in the surrounding text rather than in the alternative text for further exploration. 
 
 ## Further Resources
 
