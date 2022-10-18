@@ -1,5 +1,5 @@
 ---
-title: "Lab Accessibility"
+title: "Lab - Creating Accessible Data Visualizations in R"
 output: 
   tufte::tufte_html:
     css: ../lab2.css
@@ -13,7 +13,9 @@ TidyTuesday, a weekly social project for individuals to practice their data visu
 
 The main goal of this lab is to introduce you to elements of accessibility in data visualization which you will be using throughout the course and in your final projects. Creating accessible visualizations involves many facets. In this lab we will focus primarily on writing and including alternative text for plots and choosing effective color schemes for your data.
 
-## Packages
+## Getting started
+
+### Packages
 
 In this lab we will work with two principal packages: **ggpattern** which allow us to customize the pattern of our plots and **tidyverse** which is a collection of packages including **ggplot2** for doing data analysis and visualization in a "tidy" way. We will also be using the **countrycode** package to format and preprocess the data for the chocolate bar visualizations.
 
@@ -35,7 +37,7 @@ library(RColorBrewer)
 
 Note that the packages are also loaded with the same commands in your R Markdown document.
 
-## Data
+### Data
 
 The data frames we will be working with today are called `chocolate` and `penguins` and are both from the `TidyTuesday` GitHub repository.
 
@@ -48,7 +50,7 @@ penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/t
 ```
 
 
-# Exercises
+## Part I: Writing Alternative Text
 
 1.  Please watch Amy Cesal's guide to writing alternative text for data visualization from the Outlier 2021 conference on [Youtube](https://www.youtube.com/watch?v=nBcR95S0F0o). According to this video, what are the three components that alternative text for data visualization should include?
 
@@ -102,6 +104,8 @@ chocolate %>%
 - Number of chocolate bars manufactured in the U.S.A by country and continent of bean origin where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
 
 🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add Exercise 2". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
+
+## Part II: Choosing Effective Color Schemes
 
 According to the [Colour Blind Awareness organization](https://www.colourblindawareness.org/colour-blindness/), approximately 300 million people are affected by color blindness worldwide. When creating data visualizations, the wrong choice of colors can easily render a figure inaccessible. As such, it is critical to choose a color palette that is accessible for all members of your audience. Two such palettes are the Viridis color scales included in the **ggplot2** package, and the Colorbrewer palettes, using the **RColorBrewer** package. 
 
