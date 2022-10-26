@@ -27,8 +27,7 @@ penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/t
 ```
 
 
-
-```{r preprocess-data}
+```{r preprocess-data, fig.alt = "Update me with real alt text"}
 
 chocolate <- chocolate %>%
   mutate(continent = countrycode(country_of_bean_origin, 
