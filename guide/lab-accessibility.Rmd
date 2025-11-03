@@ -52,7 +52,7 @@ penguins <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/t
 
 ## Part I: Writing Alternative Text
 
-1.  Please watch Amy Cesal's guide to writing alternative text for data visualization from the Outlier 2021 conference on [Youtube](https://www.youtube.com/watch?v=nBcR95S0F0o). According to this video, what are the three components that alternative text for data visualization should include?
+1.  ✏️ Watch Amy Cesal's guide to writing alternative text for data visualization from the Outlier 2021 conference on [Youtube](https://www.youtube.com/watch?v=nBcR95S0F0o). According to this video, what are the three components that alternative text for data visualization should include?
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nBcR95S0F0o" title="YouTube video player" frameborder="0" data-external="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -93,15 +93,15 @@ chocolate %>%
   scale_fill_viridis_d() 
 ```
 
-2. With the three components alternative text for data visualizations should include in mind, justify why each of the four alternative text examples below describing the above image meets or doesn't meet standards for alternative text for data visualizations: 
+2. ✏️ With the three components alternative text for data visualizations should include in mind, briefly write why each of the four alternative text examples below describing the above image meets or doesn't meet standards for alternative text for data visualizations: 
 
-- Bar chart where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
+I. Bar chart where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
 
-- Bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
+II. Horizontal Bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin. Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. Bars are color-coded by continent, with most beans originating from the Americas (blue).
 
-- Bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin.
+III. Horizontal bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin.
 
-- Number of chocolate bars manufactured in the U.S.A by country and continent of bean origin where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
+IV. Number of chocolate bars manufactured in the U.S.A by country and continent of bean origin. Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. Bars are color-coded by continent, with most beans originating from the Americas (blue).
 
 🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add Exercise 2". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
@@ -110,7 +110,9 @@ chocolate %>%
 
 In the video that you watched above, Amy Cesal provided a guide to writing alternative text for data visualization. Adding alternative text to images increases accessibility, especially for individuals with some level of visual impairment who use assistive technology like screen readers. Without alternative text, people miss out on content simply because it's visual. 
 
-Amy Cesal outlines three components of effective alternative text for data visualization. First, describe the **chart type** of the data visualization to give the audience context for understanding the rest of the visual. Then, include the **type of data** included in the chart by referring to the x and y axis labels, for example. Finally, add the **reason for including the chart** by telling the audience what to look for and what makes the chart meaningful. Link to the data source that was used to produce the chart in the surrounding text rather than in the alternative text for further exploration. 
+Amy Cesal outlines three components of effective alternative text for data visualization. First, describe the **chart type** of the data visualization to give the audience context for understanding the rest of the visual. Then, include the **type of data** included in the chart by referring to the x and y axis labels, for example. Finally, add the **reason for including the chart** by telling the audience what to look for and what makes the chart meaningful. Link to the data source that was used to produce the chart in the surrounding text rather than in the alternative text for further exploration.
+
+Keep in mind as you are writing your alternative text that Web Content Accessibility Guidelines (WCAG) recommends alternative text be limited to 125 characters. You will want to include enough text to convey the important take homes from the data visualization while trying to limit the number of characters.
 
 ## Part II: Choosing Effective Color Schemes
 
@@ -235,11 +237,8 @@ penguins %>%
 
 🧶 ✅ ⬆️ *This is another good place to pause, knit, commit changes with the commit message "Add Exercise 4", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
-5. Compare your color palette and alternative text for this data visualization with others in your group. As a group, combine your ideas to decide on the final data visualization.
-
-🧶 ✅ ⬆️ *You should pause again, commit changes with the commit message "Add Exercise 5" and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
  
-6. Reflection: What's difficult about applying this criteria to more complex visualizations? What purpose do these elements provide for you as the creator of data visualizations as well as your audience?
+5. Reflection: What's difficult about applying this criteria to more complex visualizations? What purpose do these elements provide for you as the creator of data visualizations as well as your audience?
 
 🧶 ✅ ⬆️ *Yay, you're done! Commit all remaining changes, use the commit message "Finish Lab X!* 💪*", and push. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards. Before you wrap up the assignment, make sure all documents are updated on your GitHub repo.*
 
