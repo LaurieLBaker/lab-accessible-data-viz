@@ -95,13 +95,13 @@ chocolate %>%
 
 2. ✏️ With the three components alternative text for data visualizations should include in mind, briefly write why each of the four alternative text examples below describing the above image meets or doesn't meet standards for alternative text for data visualizations: 
 
-I. Bar chart where 20 of the 38 countries are in the Americas, 11 of the 38 countries are in Africa, and the Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. 
+- Horizontal bar chart. Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for the bean origin of 1154, 115, 87, and 86 bars respectively. Bars are color-coded by continent, with most beans originating from the Americas (blue).
 
-II. Horizontal Bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin. Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. Bars are color-coded by continent, with most beans originating from the Americas (blue).
+- Horizontal bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin. Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. Bars are color-coded by continent, with most beans originating from the Americas (blue).
 
-III. Horizontal bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin.
+- Horizontal bar chart of the number of chocolate bars manufactured in the U.S.A by country and continent of bean origin.
 
-IV. Number of chocolate bars manufactured in the U.S.A by country and continent of bean origin. Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. Bars are color-coded by continent, with most beans originating from the Americas (blue).
+- Number of chocolate bars manufactured in the U.S.A by country and continent of bean origin. Dominican Republic, Peru, Venezuela, and Ecuador are the top four countries responsible for 154, 115, 87, and 86 bars respectively. Bars are color-coded by continent, with most beans originating from the Americas (blue).
 
 🧶 ✅ ⬆️ *Knit, commit, and push your changes to GitHub with the commit message "Add Exercise 2". Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
